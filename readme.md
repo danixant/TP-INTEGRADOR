@@ -28,7 +28,7 @@ Trabajo práctico realizado en una máquina virtual Debian 12 ARM64, cuyo objeti
 
 ```
                                       ┌─────────────────────────────┐
-                                      │   Máquina Física (Host UTM) │
+                                      │   Máquina Física (HOST VB)  │
                                       └────────────┬────────────────┘
                                                    │
                                             Red Local (192.168.0176)
