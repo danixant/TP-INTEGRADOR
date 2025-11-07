@@ -68,14 +68,14 @@ sudo apt install mariadb-server -y
 
 - Se agregó un segundo disco de **10 GB**
 - Se particionó con `fdisk` en:
-  - `/dev/vdb1` → 3 GB → `/www_dir`
-  - `/dev/vdb2` → 6 GB → `/backup_dir`
+  - `/dev/sdc1` → 3 GB → `/www_dir`
+  - `/dev/sdc2` → 6 GB → `/backup_dir`
 
 #### Montaje:
 
 ```bash
-mkfs.ext4 /dev/vdb1
-mkfs.ext4 /dev/vdb2
+mkfs.ext4 /dev/sdc1
+mkfs.ext4 /dev/sdc2
 mkdir /www_dir
 mkdir /backup_dir
 ```
@@ -116,3 +116,5 @@ Se comprimieron individualmente los siguientes directorios en `.tar.gz`:
 - `/proc`
 - `/www_dir`
 - `/backup_dir`
+- `/var`
+- 
