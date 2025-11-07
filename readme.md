@@ -24,7 +24,7 @@ Trabajo práctico realizado en una máquina virtual Debian 12 ARM64, cuyo objeti
   - Gateway: `192.168.0.1`
 
 ### 🗺️ Diagrama topológico
-
+```
                   +--------------------------+
                   |   Máquina Física (Host)  |
                   |         (Windows)        |
@@ -38,7 +38,7 @@ Trabajo práctico realizado en una máquina virtual Debian 12 ARM64, cuyo objeti
                            |
      +-------------------------------------------------------+
      |                Debian VM - TPServer                   |
-     |                IP: 192.168.0.176 (estática)           |
+     |                IP: 192.168.0.218 (estática)           |
      |                Hostname: TPServer                     |
      +-------------------------------------------------------+
             |                                      |
@@ -63,18 +63,18 @@ Almacenamiento (Disco /dev/sdc):
 
 
 Script:
- +-----------------------------------------------------+
- | /opt/scripts/backup_full.sh                         |
- | - Recibe [ORIGEN] como argumento                    |
+ +---------------------------------------------------+
+ | /opt/scripts/backup_full.sh                       |
+ | - Recibe [ORIGEN] como argumento                  |
  | - Valida que origen y destino (/backup_dir) existan |
- | - Genera .tar.gz con fecha (YYYYMMDD)               |
- | - Soporta opción -help                              |
- +-----------------------------------------------------+
+ | - Genera .tar.gz con fecha (YYYYMMDD)             |
+ | - Soporta opción -help                            |
+ +---------------------------------------------------+
 
 
 Cronjobs (crontab -e):
  +---------------------------------------------------------+
  | - 00:00 todos los días -> backup /var/log               |
- | - 23:00 lunes, miércoles y viernes -> backup /www_dir   |
+ | - 23:00 lunes, miércoles y viernes -> backup /www_dir |
  +---------------------------------------------------------+
-
+```
