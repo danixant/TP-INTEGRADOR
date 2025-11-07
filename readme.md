@@ -117,4 +117,4 @@ Se comprimieron individualmente los siguientes directorios en `.tar.gz`:
 - `/www_dir`
 - `/backup_dir`
 - `/var`
-- 
+  
